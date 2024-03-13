@@ -3,11 +3,12 @@
 
 <head>
     <title>Joke APP</title>
+ 
     <style>
         body {
-            background-color: #e6f8f8;
+            background-color: #ffc84f;
             overflow: hidden !important;
-            opacity: 0.6;
+
         }
 
         .box1 {
@@ -19,6 +20,7 @@
             animation: animat 5.4s linear infinite;
             overflow: hidden !important;
             filter: blur(100px);
+            opacity: 0.6;
         }
 
         .box2 {
@@ -31,6 +33,7 @@
             animation: animat 5.5s linear infinite;
             overflow: hidden !important;
             filter: blur(100px);
+            opacity: 0.6;
         }
 
         .box3 {
@@ -43,6 +46,7 @@
             animation: animat 5.6s linear infinite;
             overflow: hidden !important;
             filter: blur(100px);
+            opacity: 0.6;
         }
 
         .box4 {
@@ -55,10 +59,45 @@
             animation: animat 5.7s linear infinite;
             overflow: hidden !important;
             filter: blur(100px);
+            opacity: 0.6;
         }
 
-        .container {
-            background-color: aliceblue;
+
+
+        .message_box {
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            padding: 2rem;
+            width: 35%;
+            top: 100%;
+            position: relative;
+            z-index: 1;
+            background: #2a2a2a;
+            color: #fff9f9;
+            left: 25%;
+            margin-top: 10rem !important;
+
+        }
+        #btn{
+            background: #ffc84f;
+            color: #151313;
+            padding: 5px 10px 5px 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+
+        .sidenav_ff {
+            font-family: sidenav_ff !important;
+
+        }
+
+        .bold_ff {
+            font-family: bold_ff !important;
+        }
+
+        .pa1 {
+            padding: 1rem;
         }
 
         @keyframes animat {
@@ -70,12 +109,23 @@
                 transform: rotate(360deg) scale(2);
             }
         }
+
+        @font-face {
+            font-family: sidenav_ff;
+            src: url(./assets/fonts/Mallanna/Mallanna-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: bold_ff;
+            src: url(./assets/fonts/Poppins/Poppins-SemiBold.ttf);
+        }
     </style>
 </head>
 
 <body>
+    
     <div class="container">
-        <div class="box1">
+        <!-- <div class="box1">
 
         </div>
         <div class="box2">
@@ -86,11 +136,22 @@
         </div>
         <div class="box4">
 
-        </div>
+        </div> -->
         <div class="message_box">
+            <label class="bold_ff">Random Joke Generator</label>
+            <div class="sidenav_ff pa-1">
+                <p id="joke"></p>
 
+            </div>
+            <div>
+                <button id="btn" class="bold_ff">Get A Random Joke</button>
+            </div>
         </div>
+
+       
+
     </div>
+    <script src="./app.js"></script>
 </body>
 
 </html>
